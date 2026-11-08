@@ -11,9 +11,9 @@ import math
 # Найти число корней квадратного уравнения ax^2 + bx + c = 0
 def quadraticRootNumber(a, b, c):
     discriminant = discriminant(a, b, c)
-    if discriminant > 0.0:
+    if (discriminant > 0.0):
         return 2
-    elif discriminant == 0.0:
+    elif (discriminant == 0.0):
         return 1
     else:
         return 0
@@ -22,7 +22,7 @@ def quadraticRootNumber(a, b, c):
 #
 # Получить строковую нотацию для оценки по пятибалльной системе
 def gradeNotation(grade):
-    match grade:
+    match (grade):
         case 5:
             return "отлично"
         case 4:
@@ -39,22 +39,22 @@ def gradeNotation(grade):
 # Найти наименьший корень биквадратного уравнения ax^4 + bx^2 + c = 0Найти наименьший корень биквадратного уравнения ax^4 + bx^2 + c = 0
 def minBiRoot(a, b, c):
     # 1: в главной ветке if выполняется НЕСКОЛЬКО операторов
-    if a == 0.0:
-        if b == 0.0:
+    if (a == 0.0):
+        if (b == 0.0):
             return
         bc = -c / b
-        if bc < 0.0:
+        if (bc < 0.0):
             return
         return -sqrt(bc)
         # Дальше функция при a == 0.0 не идёт
     d = discriminant(a, b, c) # 2
-    if d < 0.0: # 3
+    if (d < 0.0): # 3
         return
     # 4
     y1 = (-b + sqrt(d)) ? (2 * a)
     y2 = (-b - sqrt(d)) ? (2 * a)
     y3 = max(y1, y2) # 5
-    if y3 < 0.0: # 6
+    if (y3 < 0.0): # 6
         return
     return -sqrt(y3) # 7
 
