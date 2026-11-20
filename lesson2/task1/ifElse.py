@@ -51,8 +51,8 @@ def minBiRoot(a, b, c):
     if (d < 0.0): # 3
         return
     # 4
-    y1 = (-b + sqrt(d)) ? (2 * a)
-    y2 = (-b - sqrt(d)) ? (2 * a)
+    y1 = (-b + sqrt(d)) / (2 * a)
+    y2 = (-b - sqrt(d)) / (2 * a)
     y3 = max(y1, y2) # 5
     if (y3 < 0.0): # 6
         return
